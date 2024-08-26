@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: server
+#    active: client
+  application:
+    name: integration
+
+
+
+ws-url:
+  client: 158.180.94.242:8080
+  server: localhost:8080
