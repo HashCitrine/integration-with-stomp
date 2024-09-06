@@ -1,6 +1,6 @@
 const stompClient = new StompJs.Client({
-//    brokerURL: 'ws://localhost:8080/ws'
-    brokerURL: 'ws://158.180.94.242:8080/ws'
+    brokerURL: 'ws://localhost:8080/ws'
+//    brokerURL: 'ws://158.180.94.242:8080/ws'
 });
 
 stompClient.onConnect = (frame) => {

@@ -2,6 +2,11 @@ server:
   port: 8080
 
 spring:
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
   profiles:
     active: server
 #    active: client
@@ -11,5 +16,6 @@ spring:
 
 
 ws-url:
-  client: 158.180.94.242:8080
+#  client: 158.180.94.242:8080
+  client: localhost:8080
   server: localhost:8080

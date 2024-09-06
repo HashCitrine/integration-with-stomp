@@ -1,7 +1,7 @@
 package com.micube.integration.client;
 
-import com.micube.integration.server.Greeting;
-import com.micube.integration.server.HelloMessage;
+import com.micube.integration.server.vo.Message;
+import com.micube.integration.server.vo.HelloMessage;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.messaging.simp.stomp.StompCommand;
@@ -42,7 +42,7 @@ public class ClientWebSocketStompSessionHandler extends StompSessionHandlerAdapt
 //        stompSession.subscribe("/topic/greetings", this);
         stompSession.subscribe("/app/hello", this);
 
-        Greeting greeting = new Greeting(message);
+        Message greeting = new Message(message);
         HelloMessage hello = new HelloMessage(message);
         // 메세지 보냄
         stompSession.send("/app/hello", hello);
